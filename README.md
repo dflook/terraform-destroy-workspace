@@ -27,14 +27,14 @@ This action uses the `terraform destroy` command to destroy all resources in a t
   ```yaml
   with:
     variables: |
-      image_id = ${{ secrets.AMI_ID }}
+      image_id = "${{ secrets.AMI_ID }}"
       availability_zone_names = [
         "us-east-1a",
         "us-west-1c",
       ]
   ```
 
-  Variables set here override any given in variable_files.
+  Variables set here override any given in `var_file`s.
 
   - Type: string
   - Optional
